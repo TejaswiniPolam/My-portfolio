@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  font-size:23px;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: black;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px 16px;
+  font-size: 29px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.img{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding:100px;
+}
+.table, th, td {
+  border:3px solid black;
+}
+ul.a{
+  list-style-type:square;
+  font-size:34px;
+}
+.btn {
+  background-color: teal;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+
+#Home {background-color:teal;}
+#About {background-color:forestgreen;}
+#Skills {background-color: sienna;}
+#Contact {background-color: orange;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'black')"id="defaultOpen"><i class="fa fa-fw fa-home"></i></i> Home</button>
+<button class="tablink" onclick="openPage('About', this, 'black')"><i class="fa fa-file"></i>  About</button>
+<button class="tablink" onclick="openPage('Skills', this, 'black')"><i class="fa fa-book"></i>Skills</button>
+<button class="tablink" onclick="openPage('Contact', this, 'black')"><i class="fa fa-fw fa-user"></i>Contact</button>
+
+<div id="Home" class="tabcontent">
+  
+  <pre><h1 style:29px;>     Hey! I'm TEJASWINI POLAM.</h1></pre>
+  <pre>                 <img src="photo.jpg" alt="teju" class="responsive" class="center" width="150" height="510" style="width:25%"></pre>
+ 
+</div>
+
+<div id="About" class="tabcontent">
+  <h1>About Me:</h1>
+  <p style="font-size:32px">Hey Everyone! Myself TEJASWINI POLAM from Vardhaman College Engineering.I'm currently pursuing my B-tech 2nd year in CSE,first semester.I'm here to get some work experience in Web Development,which really helps in campus placement.</p> 
+
+  <h1>Educational Info:</h1>
+  <table style="width:100%">
+      <tr>
+        <th>S.NO</th>
+        <th>Institute Name</th>
+        <th>Year of Passing</th>
+        <th>CGPA</th>
+      </tr>
+      <tr>
+        <td>1.</td>
+        <td>Sri Chaitanya School</td>
+        <td>2019</td>
+        <td>9.8</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Sri Chaitanya junior kalasala</td>
+        <td>2021</td>
+        <td>9.7</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Vardhaman College of Engineering</td>
+        <td>2022</td>
+        <td>9.1(1st Semester)</td>
+      </tr>
+    </table>
+
+  
+</div>
+
+<div id="Skills" class="tabcontent">
+  <h1>Skills:</h1>
+  <ul class="a">
+    <li>Active Listening</li><br>
+    <li>Teamwork</li><br>
+    <li>Coding</li><br>
+    <li>Adaptability</li><br>
+    <li>Communication.</li><br>
+    </ul>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h1>Contact Me:</h1>
+  <button class="btn"><i class="fa fa-instagram"></i>   i_tejaswinipolam</button><br><br>
+  <button class="btn"><i class="fa fa-envelope"></i>   tejupolam2003@gmail.com</button><br><br>
+  <button class="btn"><i class="fa fa-linkedin"></i>   Tejaswini Polam</button><br><br>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-100px; padding:20px; text-align:center;">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <pre></pre><p class="w3-medium"> Copyright by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">@Tejaswini</a></p></footer></body></pre>
+<!-- End footer -->
+</footer>
+
+<!-- END PAGE CONTENT -->
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
